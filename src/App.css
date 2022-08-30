@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  padding: 0.25rem;
+  padding-left: 0;
+  background-color: var(--color-white);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --color-blue: #008cba;
+  --color-tan: #e6e2d3;
+  --color-white: #f0f0f0;
+  --color-green: #4caf50;
+  --color-red: #c94c4c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 85rem;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+main * {
+  font-size: 2rem;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-form-container {
+  display: flex;
+}
+
+/*For create-to-do*/
+.create-to-do {
+  margin: auto;
+}
+.form-control {
+  padding: 2rem;
+}
+
+.create-to-do .input-box {
+  width: 30rem;
+  height: 5rem;
+  border-radius: 1rem;
+}
+
+button {
+  width: 8rem;
+  height: 5rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+
+.btn-blue,
+.btn-blue * {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: 0;
+}
+
+.btn-red,
+.btn-red * {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: 0;
+}
+
+/*For to-do-lists & search_results*/
+.to-do-lists {
+  width: 60rem;
+  height: 80rem;
+  border: 0.5rem solid var(--color-tan);
+  border-radius: 2rem;
+  color: var(--color-tan);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.search_results {
+  width: 60rem;
+  height: 80rem;
+  border: 0.5rem solid var(--color-tan);
+  border-radius: 2rem;
+  color: var(--color-tan);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/*For to-do-card*/
+.to-do-card {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-tan);
+  border-radius: 1rem;
+  height: fit-content;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+.to-do-card * {
+  margin: auto 0.5rem auto 0.5rem;
+}
+
+.to-do-card .card-content {
+  color: black;
+  text-align: middle;
+  background-color: var(--color-tan);
+  margin-left: auto;
+}
+
+.btn-blue.edit {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  margin-left: auto;
+}
+
+.btn-red.delete {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+}
+
+.to-do-card .card-content.true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.content-input {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.default_content {
+  color: black;
+}
+
+.refresh {
+  width: fit-content;
+  height: fit-content;
 }
