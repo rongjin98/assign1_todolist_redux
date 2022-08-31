@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToDoAction } from "../../redux/actions/toDoActions";
 
-const AddToDo = ({ url, lastId }) => {
+const AddToDo = ({ url }) => {
   const dispatch = useDispatch();
   const toDoList = useSelector((state) => state.toDoList);
 

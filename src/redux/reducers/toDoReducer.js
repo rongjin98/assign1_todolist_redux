@@ -12,11 +12,6 @@ export const toDoReducer = (state = [], action) => {
 
   switch (action.type) {
     case GET_TO_DO:
-      //   console.log("Raeducer", toDo);
-      // CRUD.getToDos(url).then(data => {
-      //     state = data
-      // })
-
       return toDo;
 
     case ADD_TO_DO:

@@ -1,10 +1,10 @@
 import HomePage from "./Pages/HomePage";
 // import SearchPage from "./Pages/SearchPage";
 import CRUD from "./Helper/CRUD";
-import { React, useState, useEffect } from "react";
+import { React, useEffect } from "react";
 import { getToDoAction } from "./redux/actions/toDoActions";
 import "./App.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function App() {
   const URL = {
@@ -29,7 +29,6 @@ function App() {
   return (
     <main>
       <HomePage url={END_URL} />
-      {/* <SearchPage toDoList={toDoList} url={END_URL} lastId={lastId} /> */}
     </main>
   );
 }

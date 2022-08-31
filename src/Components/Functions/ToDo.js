@@ -8,9 +8,7 @@ import {
 const ToDo = ({ element, url }) => {
   const EDIT_ICON = "✒️";
   const DELETE_ICON = "🗑️";
-  // const element = useSelector((state) => state.toDoList)[idx];
 
-  console.log(element);
   const [titleState, setTitleState] = useState(element.title);
   const [completeState, setCompleteState] = useState(element.completed);
   const [exist, setExist] = useState(true);
@@ -43,16 +41,16 @@ const ToDo = ({ element, url }) => {
     setExist(false);
   };
 
+  const titleHandler = (event) => {
+    setTitleState(event.target.value);
+  };
+
   const toggleElement = () => {
     const pTag = document.getElementById(_id);
     const inputTag = document.querySelector(`.content-input-${_id}`);
     pTag.classList.toggle("none");
     inputTag.classList.toggle("none");
     activated = !activated;
-  };
-
-  const titleHandler = (event) => {
-    setTitleState(event.target.value);
   };
 
   return !exist ? null : (
