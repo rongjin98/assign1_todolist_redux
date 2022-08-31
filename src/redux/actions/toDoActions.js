@@ -5,24 +5,6 @@ import {
   PATCH_TO_DO,
 } from "../const/toDoConstant";
 
-//Use Middle Ware
-// export const getToDoAction = async (url) => {
-//   var toDos = [];
-//   await fetch(url)
-//     .then((resp) => resp.json())
-//     .then((data) => {
-//       console.log(data);
-//       toDos = data;
-//     });
-
-//   return {
-//     type: GET_TO_DO,
-//     payload: {
-//       toDo: toDos,
-//     },
-//   };
-// };
-
 export const getToDoAction = (toDoList) => {
   return {
     type: GET_TO_DO,
